@@ -1,0 +1,11 @@
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+python-multipart==0.0.20
+ultralytics==8.3.230
+lap==0.5.12
+pytest==8.3.5
+httpx==0.28.1
+# Explicit direct dependencies for pretrained multi-crop appearance extraction.
+torch>=2.5,<3
+torchvision>=0.20,<0.30
+Pillow>=10,<14

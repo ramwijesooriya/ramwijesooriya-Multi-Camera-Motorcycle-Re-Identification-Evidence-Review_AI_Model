@@ -1,0 +1,12 @@
+.venv
+.venv-py311
+.git
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+frontend/dist
+frontend/.test-build
+data
+evaluation
+reports/private
+.cleanup-checkpoints

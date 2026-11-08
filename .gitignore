@@ -1,0 +1,65 @@
+# Local Python environments and reproducible caches
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Installed frontend dependencies and generated builds
+node_modules/
+dist/
+.test-build/
+*.tsbuildinfo
+
+# Local runtime data, annotations, weights and backups
+/data/
+/evaluation/
+/reports/
+/models/
+/weights/
+/.cleanup-checkpoints/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.avi
+*.AVI
+*.mkv
+*.MKV
+*.webm
+*.WEBM
+*.m4v
+/latest-analysis.json
+/latest-results.json
+/results.json
+/labels.json
+
+# Local verification history; retained on disk, summarized in README
+/VALIDATION.md
+/docs/history/
+/docs/CLEANUP_REPORT.md
+/docs/COMPLIANCE_REPORT.md
+/docs/DIAGNOSIS.md
+/docs/SUBMISSION_STEPS.md
+
+# Local secrets, machine metadata and logs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+*.log
+
+# Reference docs consolidated in README; originals retained locally
+/docs/EVALUATION.md
+/docs/DEMO_SCRIPT.md
+/docs/LIMITATIONS.md

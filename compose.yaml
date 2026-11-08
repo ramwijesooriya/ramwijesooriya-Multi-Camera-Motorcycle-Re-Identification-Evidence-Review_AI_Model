@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: .
+      target: backend
+    environment:
+      DATA_DIR: /data
+      YOLO_WEIGHTS: /models/yolo11n.pt
+      MAX_UPLOAD_BYTES: '536870912'
+    volumes:
+      - evidence:/data
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+  frontend:
+    build:
+      context: .
+      target: frontend
+    ports:
+      - '127.0.0.1:8080:80'
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  evidence:
